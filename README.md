@@ -1,3 +1,11 @@
+This fork merely replicates the [original](https://github.com/OutSystems/cordova-plugin-audiorecorder) recorder. The plugin is useful to us, but small and unknown, so let's keep our own copy in case the original goes away.
+
+Below follows the original README content.
+
+-- Bart
+
+
+
 # AudioRecorder Plugin
 
 Leverage your hybrid applications with audio recording functionalities.
@@ -9,7 +17,7 @@ This plugin defines a global ( `navigator.device.audiorecorder` ) object which y
 
 Although `audiorecorder` is globally acessible, it isn't usable until `deviceready` event is called.
 
-As with all the cordova plugins, you can listen to `deviceready` event as follows: 
+As with all the cordova plugins, you can listen to `deviceready` event as follows:
 
 ```javascript
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -21,7 +29,7 @@ function onDeviceReady() {
 ## Supported Platforms
 
  - iOS
- - Android 
+ - Android
 
 
 ## Installation
@@ -29,7 +37,7 @@ function onDeviceReady() {
 
 ```shell
     cordova plugin add https://github.com/OutSystems/cordova-plugin-audiorecorder.git
-``` 
+```
 ---
 
 ## API Reference
@@ -38,7 +46,7 @@ function onDeviceReady() {
 
  - [`.recordAudio(successCallback, errorCallback, durationLimit, viewColor, backgroundColor)`](#recordAudio)
  - [`.deleteAudioFile(successCallback, errorCallback, filepath)`](#deleteAudioFile)
- 
+
 ---
 
 <a name="recordAudio"></a>
@@ -63,12 +71,12 @@ Deletes an audio file given its filepath
 | errorCallback     | Function  | Callback function called when an error occurs while deleting the file |
 | filepath          | String    | File path to the desired file. Usually the filepath returned by the successCallback from [`recordAudio`](#recordAudio) |
 
-*Note*: On iOS, since we are saving the recordings into the temporary directory, all files will be deleted when the application is restarted. 
+*Note*: On iOS, since we are saving the recordings into the temporary directory, all files will be deleted when the application is restarted.
 
 <a name="successCallback"></a>
 #### Success Callback
 
-Signature: 
+Signature:
 
 ```javascript
 function(data){
@@ -88,7 +96,7 @@ where `data` parameter is a JSON object:
 <a name="errorCallback"></a>
 #### Error Callback
 
-Signature: 
+Signature:
 
 ```javascript
 function(err){
